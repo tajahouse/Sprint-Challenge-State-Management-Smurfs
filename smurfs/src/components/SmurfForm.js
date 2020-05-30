@@ -8,16 +8,10 @@ export const SmurfForm = () => {
     height: "",
   });
 
-
-
   const handleChanges = (e) => {
     setSmurf({ ...smurf, [e.target.name]: e.target.value });
     console.log(smurf);
   };
-
-
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,11 +25,7 @@ export const SmurfForm = () => {
     setSmurf({ name: "", age: "", height: "" });
   };
 
-
-
-
-
-  return (
+ return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
