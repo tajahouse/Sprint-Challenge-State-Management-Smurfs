@@ -9,7 +9,7 @@ import reducer from '../src/reducers/index';
 import { Provider } from 'react-redux';
 
 const store = createStore( reducer, applyMiddleware(thunk, logger ))
-
+console.log({store})
 
 ReactDOM.render(
     <Provider store={store}>
