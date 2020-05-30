@@ -5,7 +5,7 @@ const Smurf = ({smurf}) =>{
     return (
         <div>
             {smurf.map(char => {console.log(char)
-                return <div className="smurf_wrapper" id={char.id}>
+                return <div className="smurf_wrapper" key={char.id}>
                     <h3>{char.name}</h3>
                     <h4>{char.height}</h4>
                     <h4>{char.age}</h4>

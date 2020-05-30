@@ -33,30 +33,30 @@ export const getSmurf = () =>{
   });
   }}
 
-  export const postSmurf = value =>{
-    return dispatch => {
-    dispatch({
-        type: POST_SMURF_START, payload: value
-        //Here we are telling our app that we are going into a fetching state
-    });
+//   export const postSmurf = () =>{
+//     return dispatch => {
+//     dispatch({
+//         type: POST_SMURF_START
+
+//     });
   
-    axios
-    .post("http://localhost:3333/smurfs",{
-        name: "",
-        age: "",
-        height: "",
-        id:""
-    })
-    .then( res => 
-      {
-              console.log("Response: ", res.data)
-        dispatch({ type: POST_SMURF_SUCCESS, payload: res.data})
-      }
-    )
-  .catch(err =>{ 
-      console.log(err);
-      dispatch({ type: POST_SMURF_FAILURE, payload: err /* `${err.response.status} ${err.response.status}`*/});
-  });
-  }}
+//     axios
+//     .post("http://localhost:3333/smurfs",{
+//         name: "",
+//         age: "",
+//         height: "",
+//         id:""
+//     })
+//     .then( res => 
+//       {
+//               console.log("Response: ", res.data)
+//         dispatch({ type: POST_SMURF_SUCCESS, payload: res.data})
+//       }
+//     )
+//   .catch(err =>{ 
+//       console.log(err);
+//       dispatch({ type: POST_SMURF_FAILURE, payload: err /* `${err.response.status} ${err.response.status}`*/});
+//   });
+//   }}
   
   

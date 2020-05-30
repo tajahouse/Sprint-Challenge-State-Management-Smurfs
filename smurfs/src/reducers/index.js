@@ -1,8 +1,12 @@
 import { FETCH_SMURF_START, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAILURE} from "../actions/index"
-import { POST_SMURF_START, POST_SMURF_SUCCESS, POST_SMURF_FAILURE} from "../actions/index"
+// import { POST_SMURF_START, POST_SMURF_SUCCESS, POST_SMURF_FAILURE} from "../actions/index"
 
 const initialState = {
-    smurf:[],
+    smurf:[{
+        name: "",
+        age:"",
+        height:""
+    }],
     isFetching: false,
     error:'',
 };
@@ -31,29 +35,29 @@ const reducer = (state =initialState, action) =>{
                 isFetching:false,
                 error:action.payload
             }
-            
-            //post
-        case POST_SMURF_START:
-            return{
-                ...state,
-                smurf:[],
-                isFetching:true,
-                error:''
-            }
-        case POST_SMURF_SUCCESS:
-            return {
-                ...state, 
-                smurf:action.payload,
-                isFetching:false,
-                error:''
-            }
-        case POST_SMURF_FAILURE:
-            return{
-                ...state,
-                smurf:[],
-                isFetching:false,
-                error:action.payload
-            }
+
+        //     //post
+        // case POST_SMURF_START:
+        //     return{
+        //         ...state,
+        //         smurf:[],
+        //         isFetching:true,
+        //         error:''
+        //     }
+        // case POST_SMURF_SUCCESS:
+        //     return {
+        //         ...state, 
+        //         smurf:action.payload.data,
+        //         isFetching:false,
+        //         error:''
+        //     }
+        // case POST_SMURF_FAILURE:
+        //     return{
+        //         ...state,
+        //         smurf:[],
+        //         isFetching:false,
+        //         error:action.payload
+        //     }
 
         default: return state
 

@@ -13,7 +13,7 @@ const Smurfs = (props) =>{
 
         return (
             <div>
-                <Smurf smurf={props.smurf} />
+                <Smurf smurf={props.smurf} key={Date.now()}/>
     <button className="fetch_button" onClick={ fetchSmurf }>Characters</button>
             </div>
         )
